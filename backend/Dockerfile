@@ -18,7 +18,7 @@ COPY requirements.txt .
 
 # Выполнить в текущей директории команду терминала
 # для установки зависимостей.
-RUN pip install -r requirements.txt --no-cache-dir
+RUN pip install -r requirements.txt
 
 # Скопировать всё необходимое содержимое 
 # той директории локального компьютера, где сохранён Dockerfile,
@@ -31,4 +31,4 @@ COPY . .
 # Теперь при старте докер-контейнера будет запущен Gunicorn; 
 # приложение из Python-пакета backend.wsgi (WSGI-приложение Taski)
 # будет привязано к порту контейнера 8000.
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.wsgi"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "foodgram.wsgi:application"]

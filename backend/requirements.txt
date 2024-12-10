@@ -1,4 +1,4 @@
-django==3.2.3
+django>=3.2,<4.3
 django-extensions==3.1.5
 django-filter==21.1
 djangorestframework==3.13.1
@@ -8,5 +8,3 @@ drf-extra-fields==3.2.1
 gunicorn==20.1.0
 Pillow==9.2.0
 psycopg2-binary==2.9.3
-django-colorfield==0.9.0
-django-cors-headers==4.6.0
