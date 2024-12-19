@@ -49,7 +49,7 @@ class RecipeIngredient(models.Model):
     amount = models.SmallIntegerField()
 
     def __str__(self):
-        return f'{self.ingredient.name} {self.amount} штук(и) идет в {self.recipe}'
+        return f'{self.ingredient.name} {self.amount} шт. идет в {self.recipe}'
 
 
 class ShoppingCart(models.Model):
