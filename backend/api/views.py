@@ -134,7 +134,10 @@ class RecipeViewSet(viewsets.ModelViewSet):
             total_amount=Sum('amount'))
         ingredients_count = {}
         for recipe_ingredient in recipe_ingredients:
-            key = f"{recipe_ingredient['ingredient__name']} ({recipe_ingredient['ingredient__measurement_unit']})"
+            key = (
+                f"{recipe_ingredient['ingredient__name']}"
+                f"({recipe_ingredient['ingredient__measurement_unit']})"
+            )
             amount = recipe_ingredient['total_amount']
             ingredients_count[key] = amount
         lines = [f'{key} - {value}' for key, value in
