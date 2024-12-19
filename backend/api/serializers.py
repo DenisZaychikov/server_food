@@ -220,5 +220,4 @@ class SubscriptionSerializer(serializers.ModelSerializer):
             user=user,
             author=obj
         ).exists()
-                )
-    
+        )
