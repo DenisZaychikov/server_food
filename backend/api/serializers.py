@@ -14,7 +14,6 @@ from recipes.models import (Favorite,
                             Tag)
 from users.models import Subscription
 
-
 User = get_user_model()
 
 
@@ -218,8 +217,8 @@ class SubscriptionSerializer(serializers.ModelSerializer):
     def get_is_subscribed(self, obj):
         user = self.context.get('request').user
         return (
-            user.is_authenticated and Subscription.objects.filter(
-                user=user,
-                author=obj
-                ).exists()
+                user.is_authenticated and Subscription.objects.filter(
+            user=user,
+            author=obj
+        ).exists()
         )

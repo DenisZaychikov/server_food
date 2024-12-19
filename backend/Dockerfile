@@ -10,7 +10,7 @@ WORKDIR /app
 
 # Добавьте команду установки gunicorn в Dockerfile приложения backend
 # Команда должна стоять раньше команды копирования файла requirements.txt
-RUN pip install gunicorn==20.1.0 
+# RUN pip install gunicorn==20.1.0
 
 # Скопировать с локального компьютера файл зависимостей
 # в текущую директорию (текущая директория — это /app).
@@ -18,7 +18,7 @@ COPY requirements.txt .
 
 # Выполнить в текущей директории команду терминала
 # для установки зависимостей.
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt --no-cache-dir
 
 # Скопировать всё необходимое содержимое 
 # той директории локального компьютера, где сохранён Dockerfile,
@@ -31,4 +31,4 @@ COPY . .
 # Теперь при старте докер-контейнера будет запущен Gunicorn; 
 # приложение из Python-пакета backend.wsgi (WSGI-приложение Taski)
 # будет привязано к порту контейнера 8000.
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "foodgram.wsgi:application"]
+# CMD ["gunicorn", "--bind", "0.0.0.0:8000", "foodgram.wsgi:application"]
