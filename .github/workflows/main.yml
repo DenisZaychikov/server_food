@@ -63,4 +63,3 @@ jobs:
             sudo docker compose -f docker-compose.production.yml pull || exit 1
             sudo docker compose -f docker-compose.production.yml down || exit 1
             sudo docker compose -f docker-compose.production.yml up -d || exit 1
-            debug: true
