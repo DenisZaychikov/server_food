@@ -154,4 +154,3 @@ DJOSER = {
         'user': 'api.serializers.CustomUserSerializer',
         'set_password': 'djoser.serializers.SetPasswordSerializer'}
 }
-PASHALKA = None
