@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-$&k25)k*b=opt@ir7!z-=^*m^c+d@c_=+5&c&sh+in*8s8)=70
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['81.163.30.67', '127.0.0.1', 'localhost', 'foodserver.myftp.biz']
 
 # Application definition
 
