@@ -154,3 +154,5 @@ DJOSER = {
         'user': 'api.serializers.CustomUserSerializer',
         'set_password': 'djoser.serializers.SetPasswordSerializer'}
 }
+
+CHECK_KEY = None
