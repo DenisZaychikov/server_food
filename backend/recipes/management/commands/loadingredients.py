@@ -15,7 +15,7 @@ class Command(BaseCommand):
             'data',
             'ingredients.json'
         )
-        print('Началась загрузка ингредиентов')
+        print('Началась загрузка ингредиентов.')
         with open(file_path) as f:
             ingredients = json.load(f)
         Ingredient.objects.bulk_create([
@@ -24,4 +24,4 @@ class Command(BaseCommand):
                 measurement_unit=ingredient['measurement_unit'])
             for ingredient in ingredients
         ])
-        print('Загрузка ингредиентов завершена')
+        print('Загрузка ингредиентов завершена.')
