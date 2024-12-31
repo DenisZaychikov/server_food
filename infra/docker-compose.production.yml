@@ -21,6 +21,7 @@ services:
       - static:/app/static/
       - media:/app/media/
       - ./entrypoint.sh:/app/entrypoint.sh
+      - ../data/ingredients.json:/app/data/ingredients.json
 
   frontend:
     image: denisz007/food_frontend

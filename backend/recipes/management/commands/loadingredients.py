@@ -12,7 +12,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         file_path = os.path.join(
             settings.BASE_DIR,
-            '..',
             'data',
             'ingredients.json'
         )
