@@ -16,7 +16,6 @@ class Command(BaseCommand):
             'ingredients.json'
         )
         print('Началась загрузка ингредиентов')
-        print('снова')
         with open(file_path) as f:
             ingredients = json.load(f)
         Ingredient.objects.bulk_create([
