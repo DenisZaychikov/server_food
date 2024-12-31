@@ -10,7 +10,12 @@ class Command(BaseCommand):
     help = "Load ingredients"
 
     def handle(self, *args, **options):
-        file_path = os.path.join(settings.BASE_DIR, '..', 'data', 'ingredients.json')
+        file_path = os.path.join(
+            settings.BASE_DIR,
+            '..',
+            'data',
+            'ingredients.json'
+        )
         print('Началась загрузка ингредиентов')
         with open(file_path) as f:
             ingredients = json.load(f)
@@ -21,4 +26,3 @@ class Command(BaseCommand):
             for ingredient in ingredients
         ])
         print('Загрузка ингредиентов завершена')
-
